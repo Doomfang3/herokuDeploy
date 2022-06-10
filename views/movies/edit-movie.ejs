@@ -1,0 +1,31 @@
+<h2>Edit a new Movie</h2>
+
+<form action="/movies/edit/<%= movie.id %>" method="POST">
+  <label
+    >Title:
+    <input type="text" name="title" value="<%= movie.title %>" />
+  </label>
+
+  <label
+    >Genre:
+    <input type="text" name="genre" value="<%= movie.genre %>" />
+  </label>
+
+  <label
+    >Plot:
+    <input type="text" name="plot" value="<%= movie.plot %>" />
+  </label>
+
+  <label
+    >Actors:
+    <select name="cast" multiple>
+      <% celebs.forEach(({id, name}) => { %>
+      <option <%= movie.cast.includes(id) ? "selected" : null %> value="<%= id %>">
+        <%= name %>
+      </option>
+      <% }) %>
+    </select>
+  </label>
+
+  <button type="submit">Update</button>
+</form>

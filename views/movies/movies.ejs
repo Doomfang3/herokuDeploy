@@ -1,0 +1,7 @@
+<h2>Movies</h2>
+<a href="/movies/create">Add a new Movie</a><% allMovies.forEach(({title, genre, plot, id}) => { %>
+<h1><%= title %></h1>
+<p><%= genre %></p>
+<p><%= plot %></p>
+<button><a href="/movies/movie-details/<%= id %>">Movie details</a></button>
+<% }) %>

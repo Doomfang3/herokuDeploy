@@ -1,0 +1,17 @@
+<h2>Login</h2>
+<form action="/auth/login" method="POST">
+  <label>
+    E-Mail
+    <input type="email" name="email" placeholder="lucas@mail.de" required />
+  </label>
+
+  <label>
+    Password
+    <input type="password" name="password" placeholder="lucaspasswordis1234" required />
+  </label>
+  <button type="submit">LOGIN</button>
+
+  <% if (typeof errorMessage !== 'undefined') { %>
+  <p><%= errorMessage %></p>
+  <% } %>
+</form>

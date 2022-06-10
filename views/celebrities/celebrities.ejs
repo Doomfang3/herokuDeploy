@@ -1,0 +1,7 @@
+<h2>Celebrities</h2>
+<a href="/celebrities/create">Add a new Celebrity</a> <% allCelebrities.forEach(({name, occupation,
+catchPhrase}) => { %>
+<h3><%= name %></h3>
+<p><%= occupation %></p>
+<p><%= catchPhrase %></p>
+<% }) %>
